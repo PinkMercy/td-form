@@ -1,0 +1,41 @@
+<body>
+    <h4>Equation premier degré</h4>
+    <form name="myform">
+        <input type="text" id="aa" name="a"> x +
+        <input type="text" id="bb" name="b" size=8> = 0 <br>
+        <input type="button" value="Résoudre"><br>
+        <label for="x">Solution:</label><input type="text" id="x" name="solution" readonly>
+    </form>
+    <script>
+        h4 = document.getElementsByTagName("h4")[0]
+        
+        var s = document.querySelector('input[type="button"][value="Résoudre"]');
+        s.addEventListener("click", sum)
+        //console.log(s.extContent)
+        r = document.getElementById("x")
+        console.log(h4.innerHTML)
+        function sum() {
+            a = document.getElementById("aa")
+            console.log(a.value)
+            b = document.getElementById("bb")
+            console.log(b.value)
+            if ((isNaN(a.value) && isNaN(b.value)) || (isNaN(a.value) || isNaN(b.value)) ) {
+               // h4.style.color = "red"
+                h4.innerHTML=("<strong style='color:red'>Equation premier degré</strong>")
+         
+            
+            } else if (a != 0) {
+                r.value = -(parseInt(b.value)) / parseInt(a.value)
+            } else if (a == 0) {
+                if (b == 0)
+                r.value="R"
+                 //   r.innerHTML = '<input type="text" id="x" name="solution" readonly value="R">"'
+                if (b != 0)
+                    r.innerHTML = '<input value="Ø">'
+            }
+            // r.value=parseInt(a.value)+parseInt(b.value)
+
+        }
+    </script>
+
+</body>

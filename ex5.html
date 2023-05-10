@@ -1,0 +1,37 @@
+<body>
+    <div>
+        <h4>Compter mots</h4>
+        <form>
+            <textarea name="chaine" id="chaine" required rows="5" cols="25">
+                saisir une phrase
+            </textarea>
+            <input type="button" value="compter mots">
+        </form>
+        </form>
+    </div>
+    <script>
+        btn=document.forms[0].elements[1]
+        console.log(btn)
+    btn.addEventListener("click",compt)
+  
+
+
+    function compt()
+    {
+const textarea = document.getElementById("chaine");
+  const text = textarea.value;
+  console.log(text);
+    rahma=text.split(" ")
+    console.log(rahma) 
+    nb=0
+    for(i=0;i<rahma.length;i++)   
+    {
+        if(rahma[i] != ' ')
+        {
+            nb++
+        }
+    }
+    alert(nb+"mots") 
+    }
+    </script>
+</body>

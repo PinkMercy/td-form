@@ -1,0 +1,59 @@
+<body>
+    
+
+<h4>ton âge</h4>
+<form name="forNaiss">
+<label for="d1">Date de naissance</label>
+<input type="date" id="d1" name="datnaiss"/><br/>
+<input type="button" value="Vérification"/>
+</form>
+<script>
+    btn=document.forNaiss[0]
+    console.log(btn)
+    ver=document.forNaiss[1]
+    ver.addEventListener("click",bluur)
+
+    function bluur()
+    {
+         k= btn.value
+         console.log(k)
+         year=k.indexOf("-")
+         month=k.lastIndexOf("-")
+        year2=k.substring(0,year)
+        month2=k.substring(year+1,month)
+        console.log(month2)
+        console.log(year2)
+    today=new Date()
+    t=today.getFullYear()+'-'+(today.getMonth() + 1).toString().padStart(2, '0')+'-'+today.getDate().toString().padStart(2, '0')
+console.log(t)
+
+// tyear=t.indexOf("-")
+//          tmonth=t.lastIndexOf("-")
+//         tyear2=t.substring(0,tyear)
+//         tmonth2=t.substring(tyear+1,tmonth)
+//         console.log(tmonth2)
+// h=t-k 
+// console.log(h)
+an=today.getFullYear()-year2
+console.log(an)
+
+anni=k.indexOf("-")+1
+anni2=k.substring(anni)
+console.log(anni2)
+
+ani=t.indexOf("-")+1
+ani2=t.substring(ani)
+console.log(ani2)
+
+if(anni2==ani2)
+{
+    alert("ur age is "+an+" \
+    celebraaaate itss ur birthdaaay")
+}else {
+    alert("ur age is "+(an))
+}
+
+}
+  
+</script>
+</body>

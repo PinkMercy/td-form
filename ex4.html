@@ -1,0 +1,53 @@
+<body>
+    <div>
+        <h4>Calculatrice</h4>
+        <form name="calculatrice">
+            <input type="text" name="val1" id="val1" size=8 required>
+            <input type="text" name="val2" id="val2" size=8 required>
+            <input type="button" value="+">
+            <input type="button" value="-">
+            <input type="button" value="x">
+            <input type="button" value="/">
+            <input type="number" name="resultat" id="resultat" readonly >
+        </form>
+    </div>
+    <script>
+        in1= document.calculatrice[0]
+        in2= document.calculatrice[1]
+        in3= document.getElementById("resultat")
+        ////////////////////////
+        plus = document.calculatrice[2]
+        mines = document.calculatrice[3]
+        multiple = document.calculatrice[4]
+        devide = document.calculatrice[5]
+        console.log(plus)
+        plus.addEventListener("click",plu)
+        mines.addEventListener("click",mine)
+        multiple.addEventListener("click",multipl)
+        devide.addEventListener("click",devid)
+        
+       function plu()
+       {
+        in3.value=parseInt(in1.value)+parseInt(in2.value)
+        console.log(in3.value)
+       }
+
+       function mine()
+       {
+        in3.value=parseInt(in1.value)-parseInt(in2.value)
+        console.log(in3.value)
+       }
+
+       function multipl()
+       {
+        in3.value=parseInt(in1.value)*parseInt(in2.value)
+        console.log(in3.value)
+       }
+
+       function devid()
+       {
+        in3.value=parseInt(in1.value)/parseInt(in2.value)
+        console.log(in3.value)
+       }
+    </script>
+</body>

@@ -1,0 +1,132 @@
+<body>
+    <form action="" method="" name="F">
+        <label for="pn">Prénom:</label>
+        <input type="text" id="pn">
+        <label>Pseudo:</label>
+        <input type="text" name="pseudo" readonly>
+        <fieldset>
+            <label for="L1"> Verbe: </label><br>
+            <select id="L1" name="L1" size=6>
+                <option>monter</option>
+                <option>rester</option>
+                <option>i/jeter</option>
+                <option>i/appeler</option>
+                <option>cacher</option>
+                <option>chanter</option>
+                …
+                …
+                …
+            </select><br>
+            <input type="radio" name="sujet" checked> <label> Nous:</label>
+            <input type="radio" name="sujet"> <label> Vous:</label>
+            <input type="radio" name="sujet"> <label> Ils/Elles:</label>
+        </fieldset>
+        <input type="button" value="Go" id="go">
+        <input type="text" name="resultat">
+    </form>
+
+    <script>
+        pre = document.getElementById("pn")
+        pse = document.F[1]
+        pre.addEventListener("blur", maj)
+
+        function maj() {
+            premaj = pre.value.toUpperCase()
+            console.log(premaj)
+
+            spli = pre.value.split("")
+            console.log(spli.length)
+            last = spli[spli.length - 1]
+            console.log(last)
+            ascii = last.charCodeAt()
+            console.log(ascii)
+            pse.value = premaj + ascii
+            pse.style.color = 'blue'
+        }
+
+        go = document.getElementById("go")
+        go.addEventListener("click", conj)
+        nous = document.F[4]
+        vous = document.F[5]
+        ils = document.F[6]
+        res = document.F[8]
+        console.log(nous.checked)
+
+        function conj() {
+            mySelect = document.getElementById("L1")
+            if (mySelect.selectedIndex == 0) {
+                if (nous.checked == true) {
+                    res.value = "montons"
+                } else if (mySelect.selectedIndex ==0 ) {
+                    if (vous.checked == true) {
+                        res.value = "montez"
+                    } else if (mySelect.selectedIndex == 0) {
+                        if (ils.checked == true) {
+                            res.value = "montent"
+                        }
+                    } else alert("Veuillez choisir un verbe")
+                }
+            } else if (mySelect.selectedIndex ==1 ) {
+                if (nous.checked == true) {
+                    res.value = "restons"
+                } else if (mySelect.selectedIndex == 1) {
+                    if (vous.checked == true) {
+                        res.value = "restez"
+                    } else if (mySelect.selectedIndex == 1) {
+                        if (ils.checked == true) {
+                            res.value = " restent"
+                        }
+                    } else alert("Veuillez choisir un= verbe")
+                }
+            } else if (mySelect.selectedIndex == 2) {
+                if (nous.checked == true) {
+                    alert("Verbe non encore pris en considération")
+                } else if (mySelect.selectedIndex == 2) {
+                    if (vous.checked == true) {
+                        alert("Verbe non encore pris en considération")
+                    } else if (mySelect.selectedIndex = 2) {
+                        if (ils.checked == true) {
+                            alert("Verbe non encore pris en considération")
+                        }
+                    } else alert("Veuillez choisir un verbe")
+                }
+            } else if (mySelect.selectedIndex == 3) {
+                if (nous.checked == true) {
+                    alert("Verbe non encore pris en considération")
+                } else if (mySelect.selectedIndex == 3) {
+                    if (vous.checked == true) {
+                        alert("Verbe non encore pris en considération")
+                    } else if (mySelect.selectedIndex ==3 ) {
+                        if (ils.checked == true) {
+                            alert("Verbe non encore pris en considération")
+                        }
+                    } else alert("Veuillez choisir un verbe")
+                }
+            } else if (mySelect.selectedIndex ==4 ) {
+                if (nous.checked == true) {
+                    res.value = "cachons"
+                } else if (mySelect.selectedIndex == 4) {
+                    if (vous.checked == true) {
+                        res.value = "cachez"
+                    } else if (mySelect.selectedIndex == 4) {
+                        if (ils.checked == true) {
+                            res.value = " cachent"
+                        }
+                    } else alert("Veuillez choisir un verbe")
+                }
+            } else if (mySelect.selectedIndex ==5 ) {
+                if (nous.checked == true) {0
+                    res.value = "chantons"
+                } else if (mySelect.selectedIndex ==5 ) {
+                    if (vous.checked == true) {
+                        res.value = "chantez"
+                    } else if (mySelect.selectedIndex == 5) {
+                        if (ils.checked == true) {
+                            res.value = "chantent"
+                        }
+                    } else alert("Veuillez choisir un verbe")
+                }
+            }
+        }
+    </script>
+</body>

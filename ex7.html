@@ -1,0 +1,192 @@
+<head>
+    <style>
+        .f {
+            float: left
+        }
+
+        fieldset {
+            width: 25%;
+            text-align: center
+        }
+
+        p {
+            clear: left;
+            text-align: center
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Demande pour repasser les évaluations des éléments constitutifs</h3>
+    <form name="demande">
+        <fieldset class="f">
+            <select name="listeEC" size="6">
+                <option value="AR">Algorithmique</option>
+                <option value="PW">Programmation web1</option>
+                <option value="AN">Analyse</option>
+                <option value="AL">Algebre</option>
+                <option value="AG">Anglais</option>
+                <option value="SP">Sport</option>
+            </select>
+        </fieldset>
+        <fieldset class="f">
+            <input type="button" value="Ajouter >>>"><br />
+            <input type="button" value="<<<Enlever"><br />
+        </fieldset>
+        <fieldset>
+            <select name="listeSel" multiple>
+                <option value="bidon">Séléctionner les EC demandées</option>
+            </select>
+        </fieldset>
+        <p>
+            <input type="button" value="Demander" onclick="afficher()">
+        </p>
+    </form>
+    <script>
+        ajo = document.demande[3]
+        enl = document.demande[4]
+        ajo.addEventListener("click", ajoo)
+        //enl.addEventListener("click",enll)
+
+        function ajoo() {
+            selecte = document.forms[0].elements[1]
+            console.log(selecte)
+            option = document.querySelector("option[value='bidon']")
+            
+            if (selecte.selectedIndex == 0) {
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = "Algorithmique"
+                ajo.removeEventListener("click", ajoo)
+
+                var optionToRemove = selecte.querySelector("option[value='AR']");
+                selecte.removeChild(optionToRemove);
+            }
+
+
+            else if (selecte.selectedIndex == 1) {
+               
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = "Programmation web1"
+                ajo.removeEventListener("click", ajoo)
+
+                var optionToRemove = selecte.querySelector("option[value='PW']");
+                selecte.removeChild(optionToRemove);
+            }
+
+           else if (selecte.selectedIndex == 2) {
+                
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = "Analyse"
+                ajo.removeEventListener("click", ajoo)
+
+                var optionToRemove = selecte.querySelector("option[value='AN']");
+                selecte.removeChild(optionToRemove);
+            }
+
+          else  if (selecte.selectedIndex == 3) {
+               
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = "Algebre"
+                ajo.removeEventListener("click", ajoo)
+
+                var optionToRemove = selecte.querySelector("option[value='AL']");
+                selecte.removeChild(optionToRemove);
+            }
+
+          else  if (selecte.selectedIndex == 4) {
+                
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = "Anglais"
+                ajo.removeEventListener("click", ajoo)
+
+                var optionToRemove = selecte.querySelector("option[value='AR']");
+                selecte.removeChild(optionToRemove);
+               
+            }
+
+           else if (selecte.selectedIndex == 5) {
+       
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = "Sport"
+                ajo.removeEventListener("click", ajoo)
+
+                var optionToRemove = selecte.querySelector("option[value='SP']");
+                selecte.removeChild(optionToRemove);
+            }
+
+        }
+
+        // function enll() {
+        //     selecte = document.forms[0].elements[6]
+        //     console.log(selecte)
+        //     option = document.querySelector("option:contains('sport')")
+        //     if (selecte.selectedIndex == 1) {
+        //         op = document.createElement("option")
+        //         option.parentNode.appendChild(op)
+        //         op.text = "Algorithmique"
+        //         enl.removeEventListener("click", enll)
+
+        //         var optionToRemove = selecte.querySelector("option:contains('Algorithmique')");
+        //         selecte.removeChild(optionToRemove);
+        //     }
+
+
+        //     if (selecte.selectedIndex == 1) {
+        //         op = document.createElement("option")
+        //         option.parentNode.appendChild(op)
+        //         op.text = "Programmation web1"
+        //         ajo.removeEventListener("click", ajoo)
+
+        //         var optionToRemove = selecte.querySelector("option[value='PW']");
+        //         selecte.removeChild(optionToRemove);
+        //     }
+
+        //     if (selecte.selectedIndex == 2) {
+        //         op = document.createElement("option")
+        //         option.parentNode.appendChild(op)
+        //         op.text = "Analyse"
+        //         ajo.removeEventListener("click", ajoo)
+
+        //         var optionToRemove = selecte.querySelector("option[value='AN']");
+        //         selecte.removeChild(optionToRemove);
+        //     }
+
+        //     if (selecte.selectedIndex == 3) {
+        //         op = document.createElement("option")
+        //         option.parentNode.appendChild(op)
+        //         op.text = "Algebre"
+        //         ajo.removeEventListener("click", ajoo)
+
+        //         var optionToRemove = selecte.querySelector("option[value='AL']");
+        //         selecte.removeChild(optionToRemove);
+        //     }
+
+        //     if (selecte.selectedIndex == 4) {
+        //         op = document.createElement("option")
+        //         option.parentNode.appendChild(op)
+        //         op.text = "Anglais"
+        //         ajo.removeEventListener("click", ajoo)
+
+        //         var optionToRemove = selecte.querySelector("option[value='AR']");
+        //         selecte.removeChild(optionToRemove);
+        //     }
+
+        //     if (selecte.selectedIndex == 5) {
+        //         op = document.createElement("option")
+        //         option.parentNode.appendChild(op)
+        //         op.text = "Sport"
+        //         ajo.removeEventListener("click", ajoo)
+
+        //         var optionToRemove = selecte.querySelector("option[value='SP']");
+        //         selecte.removeChild(optionToRemove);
+        //     }
+
+       // }
+    </script>
+</body>

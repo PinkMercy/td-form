@@ -1,0 +1,35 @@
+
+<body>
+<div>
+    <h4>Verif code postale</h4>
+    <form>
+        <label for="adr">adresse :</label>
+       <input type="text" name="adresse" id="adr"> 
+    </form>
+</div>
+<script>
+    inp=document.getElementById("adr")
+    console.log(inp)
+    inp.addEventListener("blur",bluur)
+
+function bluur()
+{
+    k= inp.value
+    console.log(k)
+
+    cp=k.indexOf(" cp ")
+    console.log(cp)
+
+num=k.substring(cp+4,cp+8)
+console.log(num)
+
+num1=k.substr( cp+8 ,1)
+console.log(num1)
+
+if (parseInt(num)>999 && parseInt(num)<10000 && num1==" ")
+{
+    alert("mabrook")
+}
+}
+</script>
+</body>
