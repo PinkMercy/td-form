@@ -43,150 +43,202 @@
         </p>
     </form>
     <script>
+
+
+
+
         ajo = document.demande[3]
         enl = document.demande[4]
         ajo.addEventListener("click", ajoo)
-        //enl.addEventListener("click",enll)
+        enl.addEventListener("click",enll)
 
         function ajoo() {
             selecte = document.forms[0].elements[1]
-            console.log(selecte)
-            option = document.querySelector("option[value='bidon']")
-            
+            selecte1 = document.forms[0].elements[6]
+            console.log(selecte1)
+            option = selecte1.options[selecte1.options.length - 1]
+            console.log(option)
+
             if (selecte.selectedIndex == 0) {
-                op = document.createElement("option")
-                option.parentNode.appendChild(op)
-                op.text = "Algorithmique"
-                ajo.removeEventListener("click", ajoo)
-
-                var optionToRemove = selecte.querySelector("option[value='AR']");
-                selecte.removeChild(optionToRemove);
-            }
-
-
-            else if (selecte.selectedIndex == 1) {
-               
-                op = document.createElement("option")
-                option.parentNode.appendChild(op)
-                op.text = "Programmation web1"
-                ajo.removeEventListener("click", ajoo)
-
-                var optionToRemove = selecte.querySelector("option[value='PW']");
-                selecte.removeChild(optionToRemove);
-            }
-
-           else if (selecte.selectedIndex == 2) {
                 
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
                 op = document.createElement("option")
                 option.parentNode.appendChild(op)
-                op.text = "Analyse"
-                ajo.removeEventListener("click", ajoo)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
 
-                var optionToRemove = selecte.querySelector("option[value='AN']");
-                selecte.removeChild(optionToRemove);
+                selectedOption.remove();
+
             }
 
-          else  if (selecte.selectedIndex == 3) {
-               
-                op = document.createElement("option")
-                option.parentNode.appendChild(op)
-                op.text = "Algebre"
-                ajo.removeEventListener("click", ajoo)
-
-                var optionToRemove = selecte.querySelector("option[value='AL']");
-                selecte.removeChild(optionToRemove);
-            }
-
-          else  if (selecte.selectedIndex == 4) {
+            if (selecte.selectedIndex == 1) {
                 
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
                 op = document.createElement("option")
                 option.parentNode.appendChild(op)
-                op.text = "Anglais"
-                ajo.removeEventListener("click", ajoo)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
 
-                var optionToRemove = selecte.querySelector("option[value='AR']");
-                selecte.removeChild(optionToRemove);
-               
+                selectedOption.remove();
+
             }
 
-           else if (selecte.selectedIndex == 5) {
-       
+            if (selecte.selectedIndex == 2) {
+                
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
                 op = document.createElement("option")
                 option.parentNode.appendChild(op)
-                op.text = "Sport"
-                ajo.removeEventListener("click", ajoo)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
 
-                var optionToRemove = selecte.querySelector("option[value='SP']");
-                selecte.removeChild(optionToRemove);
+                selectedOption.remove();
+
+            }
+
+            if (selecte.selectedIndex == 3) {
+                
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
+
+                selectedOption.remove();
+
+            }
+
+            if (selecte.selectedIndex == 4) {
+                
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
+
+                selectedOption.remove();
+
+            }
+
+            if (selecte.selectedIndex == 5) {
+                
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
+
+                selectedOption.remove();
+
             }
 
         }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        function enll() {
+            selecte = document.forms[0].elements[6]
+            selecte1 = document.forms[0].elements[1]
+            console.log(selecte1)
+            option = selecte1.options[selecte1.options.length - 1]
+            console.log(option)
 
-        // function enll() {
-        //     selecte = document.forms[0].elements[6]
-        //     console.log(selecte)
-        //     option = document.querySelector("option:contains('sport')")
-        //     if (selecte.selectedIndex == 1) {
-        //         op = document.createElement("option")
-        //         option.parentNode.appendChild(op)
-        //         op.text = "Algorithmique"
-        //         enl.removeEventListener("click", enll)
+            if (selecte.selectedIndex == 0) {
+                
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
 
-        //         var optionToRemove = selecte.querySelector("option:contains('Algorithmique')");
-        //         selecte.removeChild(optionToRemove);
-        //     }
+                selectedOption.remove();
 
+            }
 
-        //     if (selecte.selectedIndex == 1) {
-        //         op = document.createElement("option")
-        //         option.parentNode.appendChild(op)
-        //         op.text = "Programmation web1"
-        //         ajo.removeEventListener("click", ajoo)
+            if (selecte.selectedIndex == 1) {
+                
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
 
-        //         var optionToRemove = selecte.querySelector("option[value='PW']");
-        //         selecte.removeChild(optionToRemove);
-        //     }
+                selectedOption.remove();
 
-        //     if (selecte.selectedIndex == 2) {
-        //         op = document.createElement("option")
-        //         option.parentNode.appendChild(op)
-        //         op.text = "Analyse"
-        //         ajo.removeEventListener("click", ajoo)
+            }
 
-        //         var optionToRemove = selecte.querySelector("option[value='AN']");
-        //         selecte.removeChild(optionToRemove);
-        //     }
+            if (selecte.selectedIndex == 2) {
+                
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
 
-        //     if (selecte.selectedIndex == 3) {
-        //         op = document.createElement("option")
-        //         option.parentNode.appendChild(op)
-        //         op.text = "Algebre"
-        //         ajo.removeEventListener("click", ajoo)
+                selectedOption.remove();
 
-        //         var optionToRemove = selecte.querySelector("option[value='AL']");
-        //         selecte.removeChild(optionToRemove);
-        //     }
+            }
 
-        //     if (selecte.selectedIndex == 4) {
-        //         op = document.createElement("option")
-        //         option.parentNode.appendChild(op)
-        //         op.text = "Anglais"
-        //         ajo.removeEventListener("click", ajoo)
+            if (selecte.selectedIndex == 3) {
+                
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
 
-        //         var optionToRemove = selecte.querySelector("option[value='AR']");
-        //         selecte.removeChild(optionToRemove);
-        //     }
+                selectedOption.remove();
 
-        //     if (selecte.selectedIndex == 5) {
-        //         op = document.createElement("option")
-        //         option.parentNode.appendChild(op)
-        //         op.text = "Sport"
-        //         ajo.removeEventListener("click", ajoo)
+            }
 
-        //         var optionToRemove = selecte.querySelector("option[value='SP']");
-        //         selecte.removeChild(optionToRemove);
-        //     }
+            if (selecte.selectedIndex == 4) {
+                
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
 
-       // }
+                selectedOption.remove();
+
+            }
+
+            if (selecte.selectedIndex == 5) {
+                
+                selectedOption = selecte.options[selecte.selectedIndex];
+                console.log(selectedOption.text)
+                op = document.createElement("option")
+                option.parentNode.appendChild(op)
+                op.text = selectedOption.text
+                // ajo.removeEventListener("click", ajoo)
+
+                selectedOption.remove();
+
+            }
+
+            }
+
+       ///////////////////////////////////////////////////////////////////////////////////////////
+       function afficher()
+{
+    selecte = document.forms[0].elements[6]
+    options = selecte.options
+    test=''
+    for (var i = 1; i < options.length; i++) {
+  console.log(options[i].text);
+  test=test+" et "+options[i].text
+  
+}
+console.log(test);
+  alert("vous avez demander les "+test)  
+} 
     </script>
 </body>
